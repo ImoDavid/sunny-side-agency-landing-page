@@ -1,0 +1,589 @@
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.container-fluid {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 18px;
+}
+
+h1 {
+  font-family: 'fraunces', sans-serif;
+  font-weight: 900;
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+
+}
+
+header {
+  background-image: url(./images/desktop/image-header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 120vh;
+  padding: 25px 50px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  margin: 15px;
+}
+
+.nav-brand img {
+  width: 100px;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-link {
+  text-align: center;
+  padding: 15px;
+  margin: 0 10px;
+}
+
+.nav-link a {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link :hover {
+  animation-name: example;
+  animation-duration: 2s;
+  padding-bottom: 10px;
+
+}
+
+@keyframes example {
+  0% {
+    border: 0;
+  }
+
+  50% {
+    border-bottom: 1px solid #fff;
+  }
+
+  100% {
+    border-bottom: 3px solid #fff;
+  }
+}
+
+.contact a {
+  padding: 10px;
+  color: black;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.contact a:hover {
+  background-color: #1eacf3;
+  padding-bottom: 10px;
+  border-bottom: none;
+}
+
+.hamburger {
+  display: none;
+  color: #fff;
+  border: 0;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.header-text {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin-top: 100px;
+
+}
+
+.header-text h1 {
+  font-size: 50px;
+  letter-spacing: 10px;
+}
+
+.header-text img {
+  margin: 30px;
+}
+
+.header {
+  transform: scale(0);
+  -webkit-animation: arrow 1s 1s 1 forwards;
+  animation: arrow 1s 1s 1 forwards;
+}
+
+.arrow-down {
+
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-animation: arrow 1s 1s 1 forwards, upAndDown 1s 2s alternate infinite forwards;
+  animation: arrow 1s 1s 1 forwards, upAndDown 1s 2s alternate infinite forwards;
+}
+
+@keyframes arrow {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes upAndDown {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+}
+
+#section-one,
+#section-two,
+#section-three,
+#section-four,
+#section-five {
+  transform: scale(0);
+}
+
+
+.loadcontent {
+
+  -webkit-animation: loadcontent 1s 0s 1 forwards;
+  animation: loadcontent 1s 0s 1 forwards;
+}
+
+@keyframes loadcontent {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+.section-one {
+  background-color: #fff;
+  min-height: 90vh;
+  padding: 130px 102px;
+}
+
+.standout-header {
+  padding: 130px 52px;
+}
+
+.section-two {
+  background-image: url(./images/desktop/image-transform.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 90vh;
+}
+
+.section-three {
+  background-image: url(./images/desktop/image-stand-out.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 90vh;
+
+}
+
+.section-five {
+  background-image: url(./images/desktop/image-photography.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 90vh;
+
+
+}
+
+.section-four {
+  background-image: url(./images/desktop/image-graphic-design.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 90vh;
+}
+
+.info-learn-more {
+  background-color: #fff;
+  border: 0;
+  text-transform: uppercase;
+  font-family: "Fraunces";
+  font-weight: bold;
+  margin-top: 12px;
+  font-size: 16px;
+  position: relative;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 2;
+  text-decoration: none;
+  color: #000;
+}
+
+.info-learn-more::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: #fcefb0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transition: 0.4s;
+}
+
+.info-learn-more2::after {
+  background: hsl(7, 99%, 70%);
+}
+
+.info-learn-more:hover::after {
+  height: 100%;
+}
+
+.section-header {
+  margin: px 0px 50px;
+}
+
+.section-header h1 {
+  font-size: 45px;
+
+}
+
+.section-paragraph {
+  color: hsl(232, 10%, 55%);
+  padding: 0px 10px 0px 0px;
+}
+
+.standout-paragraph {
+  padding: 0px 20px 0px 0px;
+}
+
+
+.image-text {
+  text-align: center;
+  margin-top: 400px;
+  padding: 20px 100px;
+}
+
+.testimony-header {
+  text-transform: uppercase;
+  color: hsl(232, 10%, 55%);
+  letter-spacing: 2px;
+}
+
+.testimony-paragraph {
+  padding: 0px 15px;
+  color: hsl(213, 9%, 39%);
+}
+
+.testimony {
+  text-align: center;
+  margin: 50px;
+  padding: 50px 30px;
+}
+
+.testimony-card {
+  padding: 50px 0px;
+}
+
+
+.testimony-img {
+  width: 100px;
+  border-radius: 50px;
+  margin: 50px auto;
+}
+
+.profile {
+  margin: 50px 0 0 0;
+}
+
+.profile h4 {
+  font-family: 'fraunces', sans-serif;
+
+}
+
+.profile p {
+  color: hsl(213, 9%, 39%);
+}
+
+.image-1 {
+  background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 70vh;
+
+}
+
+.image-2 {
+  background-image: url(./images/desktop/image-gallery-orange.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 70vh;
+
+}
+
+.image-3 {
+  background-image: url(./images/desktop/image-gallery-cone.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 70vh;
+
+}
+
+.image-4 {
+  background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 70vh;
+
+}
+
+#footer {
+  background-color: hsl(168, 93%, 45%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+
+}
+
+.footer-links {
+  margin: 15px 0px;
+}
+
+.footer-links a {
+  font-family: 'Barlow', sans-serif;
+  color: #25564b;
+  text-decoration: none;
+  margin: 0px 15px;
+}
+
+.footer-links a:hover {
+  color: rgb(247, 233, 233);
+
+}
+
+.social-icon {
+  margin: 0px 10px;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover {
+  color: rgb(60, 154, 226);
+}
+
+.fa-instagram:hover,
+.fa-pinterest:hover {
+  color: rgb(243, 107, 107);
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 25px 0px 0px
+}
+
+.attribution a {
+  color: hsl(0, 95%, 47%);
+  text-decoration: none;
+}
+
+@media screen and (max-width:730px) {
+  .container-fluid {
+    width: 100%;
+  }
+
+  nav {
+    background-color: #1eacf3;
+  }
+
+  header {
+    background-image: url(./images/mobile/image-header.jpg);
+    min-height: 40vh;
+  }
+
+  .wrapper {
+    background-color: #1eacf3;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: none;
+    width: 50%;
+    flex-direction: column;
+    animation: slideIn 1s 0s normal 1 forwards;
+  }
+
+
+  @keyframes slideIn {
+    0% {
+      -webkit-transform: translatex(-550px);
+      transform: translatex(-550px);
+    }
+
+    100% {
+      -webkit-transform: translatex(100px);
+      transform: translatex(100px);
+    }
+  }
+
+  .nav-links.show {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .header-text h1 {
+    font-size: 40px;
+  }
+
+  .section-one,
+  .section-two,
+  .section-three,
+  .section-four,
+  .section-five {
+    min-height: 50vh;
+  }
+
+  .section-one {
+    order: 2;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .section-header {
+    padding: 20px 50px;
+  }
+
+  .standout-header {
+    padding: 20px 10px;
+  }
+
+  .section-header h1 {
+    font-size: 30px;
+
+  }
+
+  .section-paragraph {
+    text-align: center;
+    padding: 20px 20px 0px;
+  }
+
+  .standout-paragraph {
+    padding: 20px 40px;
+  }
+
+  .section-two {
+    background-image: url(./images/mobile/image-transform.jpg);
+  }
+
+  .section-three {
+    background-image: url(./images/mobile/image-stand-out.jpg);
+  }
+
+  .section-four {
+    background-image: url(./images/mobile/image-graphic-design.jpg);
+  }
+
+  .section-five {
+    background-image: url(./images/mobile/image-photography.jpg);
+  }
+
+  .image-text {
+    padding: 20px 7px;
+  }
+
+  .testimony h1 {
+    font-size: 17px;
+  }
+
+  .testimony {
+    text-align: center;
+    margin: 10px;
+    padding: 20px 18px;
+  }
+
+  .testimony-card {
+    padding: 10px 0px;
+  }
+
+  .image-1 {
+    background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
+
+  }
+
+  .image-2 {
+    background-image: url(./images/mobile/image-gallery-orange.jpg);
+
+  }
+
+  .image-3 {
+    background-image: url(./images/mobile/image-gallery-cone.jpg);
+
+  }
+
+  .image-4 {
+    background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+
+  }
+
+  .image-1,
+  .image-2,
+  .image-3,
+  .image-4 {
+    background-size: cover;
+    min-height: 30vh;
+  }
+}
